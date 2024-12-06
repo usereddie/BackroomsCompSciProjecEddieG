@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Flexbox Layout</title>
+  </head>
+  <div class="cover" id="vidc">
+    <video id="intro" autoplay muted>
+      <source src="images/Eddie.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <body id="body" class="center-face">
+    <div class="container">
+      <div class="column">
+        <div class="half">
+          <div class="box center-content">
+            <img
+              src="images/package.png"
+              class="clickable shadow"
+              id="package"
+              onclick="showModal1()"
+            />
+          </div>
+
+          <div class="modal center-content" id="puzzle1">
+            <!-- this is the "X" button to close the modal -->
+            <span class="close" style="font-size: 50px" onclick="hideModal()"
+              >&times;</span
+            >
+            <div class="modal-content flex-only">
+              <div class="modalbox red center-content contain-image">
+                <img
+                  src="images/morsesound.png"
+                  id="morse"
+                  onclick="playMorse()"
+                  class="clickable shadow"
+                />
+              </div>
+              <div class="modalbox black center-content contain-image">
+                <img src="images/morsechart.png" />
+              </div>
+            </div>
+          </div>
+          <div class="type center-content">
+            <input type="text" id="codeInput1" placeholder="Enter code..." />
+            <button id="submitCodeBtn1" class="clickable">Enter</button>
+            <div id="codeMessage1"></div>
+            <img
+              src="images/FinalHint.png"
+              class="clickable shadow"
+              onclick="showHint1()"
+            />
+          </div>
+          <div class="modal center-content" id="hint1">
+            <!-- this is the "X" button to close the modal -->
+            <span class="close" style="font-size: 50px" onclick="hideModal()"
+              >&times;</span
+            >
+            <div class="modal-content">
+              <div class="container center-content">
+                <img src="images/firsthint.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="half">
+          <div class="box center-content">
+            <img
+              src="images/package.png"
+              class="clickable shadow"
+              id="package"
+              onclick="showModal2()"
+            />
+            <div class="modal center-content" id="puzzle2">
+              <!-- this is the "X" button to close the modal -->
+              <span class="close" style="font-size: 50px" onclick="hideModal()"
+                >&times;</span
+              >
+              <div class="modal-content flex-only">
+                <div class="modalbox red center-content contain-image">
+                  <img src="images/pigpen.png" />
+                </div>
+                <div class="modalbox black center-content contain-image">
+                  <img src="images/finalpigpenpuzzle.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="type center-content">
+            <input type="text" id="codeInput2" placeholder="Enter code..." />
+            <button id="submitCodeBtn2" class="clickable">Enter</button>
+            <div id="codeMessage2"></div>
+            <img
+              src="images/FinalHint.png"
+              class="clickable shadow"
+              onclick="showHint2()"
+            />
+          </div>
+        </div>
+        <div class="modal center-content" id="hint2">
+          <!-- this is the "X" button to close the modal -->
+          <span class="close" style="font-size: 50px" onclick="hideModal()"
+            >&times;</span
+          >
+          <div class="modal-content">
+            <div class="container center-content">
+              <img src="images/hint2.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="half center-content contain-image">
+          <span id="countdown">05:00</span>
+        </div>
+        <div class="half contain-image center-content">
+          <img
+            id="door"
+            src="images/lockedDoor.png"
+            onclick="leave()"
+            class="clickable shadow"
+          />
+        </div>
+      </div>
+      <div class="column">
+        <div class="half">
+          <div class="box center-content">
+            <img
+              src="images/package.png"
+              class="clickable shadow"
+              id="package"
+              onclick="showModal3()"
+            />
+            <div class="modal center-content" id="puzzle3">
+              <!-- this is the "X" button to close the modal -->
+              <span class="close" style="font-size: 50px" onclick="hideModal()"
+                >&times;</span
+              >
+              <div class="modal-content">
+                <div class="container center-content">
+                  <img src="images/unfinishedletterpuzzlepart3.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="type center-content">
+            <input type="text" id="codeInput3" placeholder="Enter code..." />
+            <button id="submitCodeBtn3" class="clickable">Enter</button>
+            <div id="codeMessage3"></div>
+            <img
+              src="images/FinalHint.png"
+              class="clickable shadow"
+              onclick="showHint3()"
+            />
+          </div>
+          <div class="modal center-content" id="hint3">
+            <!-- this is the "X" button to close the modal -->
+            <span class="close" style="font-size: 50px" onclick="hideModal()"
+              >&times;</span
+            >
+            <div class="modal-content">
+              <div class="container center-content">
+                <img src="images/hint3.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="half center-content">
+          <img
+            src="images/doodle_bob.png"
+            id="doodlebob"
+            class="clickable shadow"
+            onclick="showOBJ()"
+          />
+        </div>
+        <div class="modal center-content" id="objective">
+          <!-- this is the "X" button to close the modal -->
+          <span class="close" style="font-size: 50px" onclick="hideModal()"
+            >&times;</span
+          >
+          <div class="modal-content">
+            <div class="container center-content">
+              <img src="images/FinalOBJ.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio
+      id="backgroundMusic"
+      src="audio/LThemeSong.wav"
+      loop
+      autoplay
+    ></audio>
+    <audio src="audio/finishedmorsecode.wav" id="morsecode"></audio>
+    <audio src="audio/completed1.wav" id="cbm"></audio>
+    <audio src="audio/wronganswer.wav" id="wagf"></audio>
+    <audio src="audio/mehoyminoy.wav" id="dbh"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
