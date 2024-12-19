@@ -226,7 +226,7 @@ function enableDoor() {
 }
 
 function leave() {
-  window.location.href = "https://xtx5ln.csb.app/";
+  window.location.href = "https://2jwxhh.csb.app/";
 }
 
 function openDoor() {
